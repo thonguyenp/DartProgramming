@@ -9,4 +9,12 @@ void main ()
   {
     print("Dung");
   }
+  if (obj is! int)  //phai ! o phia sau toan tu is
+  {
+    print("obj ko la int");
+  }
+
+  // Ep kieu
+  String str = obj as String;
+  print(str.toUpperCase());
 }
