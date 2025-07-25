@@ -12,9 +12,9 @@ void main ()
   set1.addAll(['e', 'f']);  //add nhieu phan tu theo list vao cuoi
 
   //2. xoa phan tu
-  set1.remove('A'); //xoa phan tu A 
+  // set1.remove('A'); //xoa phan tu A 
   set1.removeAll(['B','C']);  //xoa phan tu theo list 
-  set1.clear(); //xoa het phan tu
+  // set1.clear(); //xoa het phan tu
 
   //3. truy cap va kiem tra
   print(set1.length);
@@ -25,10 +25,29 @@ void main ()
   var set5 = {1,2,3};
   var set6 = {3,4,5};
 
-  var union = set5.union(set6);
-  var intersec = set5.intersection(set6);
-  var difference = set5.difference(set6);
+  var union = set5.union(set6); //phep hop
+  var intersec = set5.intersection(set6); //phep giao
+  var difference = set5.difference(set6); //phep hieu
 
+  // print(union);
+  // print(intersec);
+  // print(difference);
 
-  print(set1);
+  //5. bien doi
+  var list = set1.toList();
+  var newSet = Set.from(set1);
+
+  // print(list);
+  // print(newSet);
+
+  //6. loc va anh xa
+  var filtered = set1.where((e) => e.startsWith('A'));  //dung toan tu lambda de loc ra phan tu A va tao set moi
+  var mapped = set1.map((e) => e.toLowerCase());  //dung toan tu lambda de lowercase tat ca set1
+
+  //7. xu ly tung phan tu
+  set1.forEach((e) => print(e));
+
+  print(filtered);
+  print(mapped);
+  // print(set1);
 }
