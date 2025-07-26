@@ -26,7 +26,7 @@ void main ()
   print(runes1.last);   //điểm mã cuối cùng
 
   runes1.forEach((int rune) {
-    print('Unicode: $rune, Ký tự ${String.fromCharCode(rune)}')
+    print('Unicode: $rune, Ký tự ${String.fromCharCode(rune)}');
   });
 
   //kiểm tra
